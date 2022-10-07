@@ -32,8 +32,8 @@ class Furgoneta(Vehiculo):
     def __str__(self):
         return Vehiculo.__str__(self) + ", {} kg".format(self.carga)
 
-Furgoneta = Furgoneta("Roja y blanca", 4, 3000)
-print(f"La Furgoneta tiene estas características {Furgoneta}")
+furgoneta = Furgoneta("Roja y blanca", 4, 3000)
+print(f"La Furgoneta tiene estas características {furgoneta}")
 
 def catalogar(vehiculos):
     for i in vehiculos:
@@ -41,4 +41,15 @@ def catalogar(vehiculos):
 
 catalogar([coche, bicicleta, Furgoneta])
 
+
+def catalogar_modificada(vehiculos, ruedas = None):
+    if ruedas != None:
+        print(f"Existen {len(vehiculos)- 1} vehículos con {ruedas} ruedas:")
+    for i in vehiculos:
+        if ruedas == None:
+            print(i.__class__.__name__, i.__dict__) #codigo de stackoverflow
+        elif ruedas == i.ruedas:
+            print(i.__class__.__name__, i.__dict__)
+
+catalogar_modificada([coche, bicicleta, furgoneta], 4)
 
