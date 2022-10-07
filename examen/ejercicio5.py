@@ -41,15 +41,14 @@ def catalogar_modificada(vehiculos, ruedas = None):
         elif ruedas == i.ruedas:
             print(i.__class__.__name__, i.__dict__)
 
-def ejecutar5():
-    coche = Coche("azul", 4, 150, 1200)
-    print(f"El coche tiene estas características {coche}")
-    bicicleta = Bicicleta("Verde claro", 2, "montaña")
-    print(f"La bicicleta tiene estas características {bicicleta}")
-    furgoneta = Furgoneta("Roja y blanca", 4, 3000)
-    print(f"La Furgoneta tiene estas características {furgoneta}")
-    catalogar([coche, bicicleta, Furgoneta])
-    catalogar_modificada([coche, bicicleta, furgoneta], 0)
-    catalogar_modificada([coche, bicicleta, furgoneta], 2)
-    catalogar_modificada([coche, bicicleta, furgoneta], 4)
-ejecutar5()
+
+coche = Coche("azul", 4, 150, 1200)
+print(f"El coche tiene estas características {coche}")
+bicicleta = Bicicleta("Verde claro", 2, "montaña")
+print(f"La bicicleta tiene estas características {bicicleta}")
+furgoneta = Furgoneta("Roja y blanca", 4, 3000)
+print(f"La Furgoneta tiene estas características {furgoneta}")
+catalogar([coche, bicicleta, furgoneta])
+catalogar_modificada([coche, bicicleta, furgoneta], 0)
+catalogar_modificada([coche, bicicleta, furgoneta], 2)
+catalogar_modificada([coche, bicicleta, furgoneta], 4)

@@ -1,6 +1,6 @@
 class Excepciones():
     def menu():
-        eleccion=int(input("¿Qué quieres comprobar?"))
+        eleccion=int(input("¿Qué quieres comprobar? 1: división entre 0, 2: índice de lista inexistente, 3: clave de diccionario inexistente, 4: suma de número y letra\n "))
         if eleccion == 1:
             numero = 7/0
             try :
@@ -31,7 +31,6 @@ class Excepciones():
             print("Error, no existe esa opción")
             Excepciones.menu()
 
-def ejecutar4():
-    Excepciones.menu()
-ejecutar4()
+
+Excepciones.menu()
 
