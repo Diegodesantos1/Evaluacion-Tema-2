@@ -13,17 +13,12 @@ class Coche(Vehiculo):
     def __str__(self):
         return Vehiculo.__str__(self) + ", {} km/h, {} cc".format(self.velocidad, self.cilindrada)
 
-coche = Coche("azul", 4, 150, 1200)
-print(f"El coche tiene estas características {coche}")
 class Bicicleta(Vehiculo):
     def __init__(self, color, ruedas, tipo):
         Vehiculo.__init__(self, color, ruedas)
         self.tipo = tipo
     def __str__(self):
         return Vehiculo.__str__(self) + ", {}".format(self.tipo)
-
-bicicleta = Bicicleta("Verde claro", 2, "montaña")
-print(f"La bicicleta tiene estas características {bicicleta}")
 
 class Furgoneta(Vehiculo):
     def __init__(self, color, ruedas, carga):
@@ -32,14 +27,9 @@ class Furgoneta(Vehiculo):
     def __str__(self):
         return Vehiculo.__str__(self) + ", {} kg".format(self.carga)
 
-furgoneta = Furgoneta("Roja y blanca", 4, 3000)
-print(f"La Furgoneta tiene estas características {furgoneta}")
-
 def catalogar(vehiculos):
     for i in vehiculos:
         print(i.__class__.__name__, i.__dict__) #codigo de stackoverflow
-
-catalogar([coche, bicicleta, Furgoneta])
 
 
 def catalogar_modificada(vehiculos, ruedas = None):
@@ -51,7 +41,15 @@ def catalogar_modificada(vehiculos, ruedas = None):
         elif ruedas == i.ruedas:
             print(i.__class__.__name__, i.__dict__)
 
-catalogar_modificada([coche, bicicleta, furgoneta], 0)
-catalogar_modificada([coche, bicicleta, furgoneta], 2)
-catalogar_modificada([coche, bicicleta, furgoneta], 4)
-
+def ejecutar():
+    coche = Coche("azul", 4, 150, 1200)
+    print(f"El coche tiene estas características {coche}")
+    bicicleta = Bicicleta("Verde claro", 2, "montaña")
+    print(f"La bicicleta tiene estas características {bicicleta}")
+    furgoneta = Furgoneta("Roja y blanca", 4, 3000)
+    print(f"La Furgoneta tiene estas características {furgoneta}")
+    catalogar([coche, bicicleta, Furgoneta])
+    catalogar_modificada([coche, bicicleta, furgoneta], 0)
+    catalogar_modificada([coche, bicicleta, furgoneta], 2)
+    catalogar_modificada([coche, bicicleta, furgoneta], 4)
+ejecutar()
