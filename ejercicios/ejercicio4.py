@@ -12,5 +12,12 @@ class excepciones():
             print(lista[10])
         except IndexError:
             print("Error, no existe elemento con ese índice")
+    def comprobar3():
+        paises = { "españa":"español", "eeuu":"inglés", "italia":"italiano" }
+        paises["alemania"]
+        try:
+            print(paises["alemania"])
+        except KeyError:
+            print("Error, no existe ese elemento en el diccionario")
 
-excepciones.comprobar() ; excepciones.comprobar2()
+excepciones.comprobar() ; excepciones.comprobar2() ; excepciones.comprobar3()
