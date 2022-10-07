@@ -9,6 +9,7 @@ class Alumno:
         nombre = str(input('Nombre: '))
         apellido = str(input('Apellido: '))
         nota = int(input('Nota: '))
+        print("Se ha creado el alumno con éxito")
         print(Alumno(nombre, apellido, nota))
 
 Alumno.crear_alumno()
