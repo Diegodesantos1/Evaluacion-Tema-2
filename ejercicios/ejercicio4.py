@@ -19,5 +19,11 @@ class excepciones():
             print(paises["alemania"])
         except KeyError:
             print("Error, no existe ese elemento en el diccionario")
+    def comprobar4():
+        resultado = "2" + 10
+        try:
+            print(resultado)
+        except TypeError:
+            print("Error, no puedes sumar números y letras")
 
-excepciones.comprobar() ; excepciones.comprobar2() ; excepciones.comprobar3()
+excepciones.comprobar() ; excepciones.comprobar2() ; excepciones.comprobar3() ; excepciones.comprobar4()
