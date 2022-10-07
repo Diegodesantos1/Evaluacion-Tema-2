@@ -13,5 +13,14 @@ class Coche(Vehiculo):
     def __str__(self):
         return Vehiculo.__str__(self) + ", {} km/h, {} cc".format(self.velocidad, self.cilindrada)
 
-c = Coche("azul", 4, 150, 1200)
-print(c)
+coche = Coche("azul", 4, 150, 1200)
+print(f"El coche tiene estas características {coche}")
+class Bicicleta(Vehiculo):
+    def __init__(self, color, ruedas, tipo):
+        Vehiculo.__init__(self, color, ruedas)
+        self.tipo = tipo
+    def __str__(self):
+        return Vehiculo.__str__(self) + ", {}".format(self.tipo)
+
+bicicleta = Bicicleta("Verde claro", 2, "montaña")
+print(f"La bicicleta tiene estas características {bicicleta}")
