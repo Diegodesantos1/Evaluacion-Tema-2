@@ -5,4 +5,10 @@ class Producto:
         self.codigo = codigo
         self.tipo = tipo
     def __str__(self):
-        return self.nombre + ": " + str(self.precio)
+        return self.nombre + str(self.precio) + str(self.codigo) + self.tipo
+
+Producto1 = Producto("Coca-Cola", 1.5, 1234, "Bebida")
+Producto2 = Producto("Martillo", 3.5, 45637, "Herramienta")
+print(Producto1) ; print(Producto2)
+
+
