@@ -3,7 +3,7 @@ class Alumno:
         self.nombre = nombre
         self.apellido = apellido
         self.nota = nota
-    def __str__(self):
+    def __str__(self): #ya está creado el método str en el ejercicio 1
         return f'El alumno se llama: {self.nombre} {self.apellido} y ha sacado un {self.nota}'
     def crear_alumno():
         global nota
