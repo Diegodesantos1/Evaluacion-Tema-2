@@ -18,6 +18,9 @@ class Alumno:
         else:
             print('El alumno ha suspendido')
 
-Alumno.crear_alumno()
-Alumno.calificacion()
+def ejecutar1():
+    Alumno.crear_alumno()
+    Alumno.calificacion()
+
+ejecutar1()
 

@@ -41,7 +41,7 @@ def catalogar_modificada(vehiculos, ruedas = None):
         elif ruedas == i.ruedas:
             print(i.__class__.__name__, i.__dict__)
 
-def ejecutar():
+def ejecutar5():
     coche = Coche("azul", 4, 150, 1200)
     print(f"El coche tiene estas características {coche}")
     bicicleta = Bicicleta("Verde claro", 2, "montaña")
@@ -52,4 +52,4 @@ def ejecutar():
     catalogar_modificada([coche, bicicleta, furgoneta], 0)
     catalogar_modificada([coche, bicicleta, furgoneta], 2)
     catalogar_modificada([coche, bicicleta, furgoneta], 4)
-ejecutar()
+ejecutar5()

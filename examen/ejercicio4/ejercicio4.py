@@ -31,5 +31,7 @@ class Excepciones():
             print("Error, no existe esa opción")
             Excepciones.menu()
 
-Excepciones.menu()
+def ejecutar4():
+    Excepciones.menu()
+ejecutar4()
 
