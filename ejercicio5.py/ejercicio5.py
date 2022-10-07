@@ -34,3 +34,11 @@ class Furgoneta(Vehiculo):
 
 Furgoneta = Furgoneta("Roja y blanca", 4, 3000)
 print(f"La Furgoneta tiene estas características {Furgoneta}")
+
+def catalogar(vehiculos):
+    for i in vehiculos:
+        print(i.__class__.__name__, i.__dict__) #codigo de stackoverflow
+
+catalogar([coche, bicicleta, Furgoneta])
+
+
